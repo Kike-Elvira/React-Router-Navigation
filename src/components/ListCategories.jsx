@@ -8,7 +8,6 @@ const ListCategories = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        console.log(categories)
         buscar(`/categorias`, setCategories)
     }, [])
 
