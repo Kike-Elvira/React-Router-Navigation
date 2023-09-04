@@ -9,10 +9,10 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 function App() {
   return (
    
-    <Router>
-      <Header></Header>
-      <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
+    <Router> {/* Importamos la libreria de rutas */}
+      <Header></Header> {/* Como esta tag esta fuera de las rutas definidas va estar presente sin importar en que ruta estemos */}
+      <Routes> {/* Dentro de esta tag vamos a definir nuestras rutas */}
+        <Route path='/' element={<Home></Home>}></Route> {/*Definimos nuestra ruta con "path" y el elemento a mostrar con "element"*/}
         <Route path='/sobre' element={<Sobre></Sobre>}></Route>
         <Route path='*' element={<Page404></Page404>}></Route>
       </Routes>
